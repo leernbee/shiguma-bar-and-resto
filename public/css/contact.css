@@ -1,0 +1,76 @@
+.reservation-icon {
+  height: 4rem;
+  margin-bottom: 2rem;
+  filter: invert(16%) sepia(39%) saturate(7393%) hue-rotate(347deg) brightness(83%) contrast(90%);
+}
+#reservation h3 {
+  margin-bottom: 1.5rem;
+}
+
+#reservation h5 {
+  font-size: 1.25rem;
+}
+#reservation p {
+  /* font-size: 1rem; */
+  color: var(--granite-gray);
+}
+
+.reservation-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* nav */
+.nav-pills {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-pills .nav-link {
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--granite-gray);
+  background-color: transparent !important;
+  border-radius: 0;
+}
+
+.nav-pills .nav-link.active span {
+  border-bottom: 3px solid var(--cardinal);
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--cardinal);
+}
+
+/* form box */
+.reservation__form-box {
+  background: var(--white-smoke);
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.form-control {
+  height: 3rem;
+  border: none;
+}
+
+label {
+  color: var(--cardinal);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.form-control:focus {
+  border: 1px solid var(--cardinal);
+  outline: 0;
+  box-shadow: none;
+}
+
+select {
+  text-align-last: center;
+}
+
+textarea.form-control {
+  height: auto;
+}

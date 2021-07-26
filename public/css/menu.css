@@ -1,0 +1,33 @@
+#menu h2 {
+  position: relative;
+}
+
+#menu h2::after {
+  content: '';
+  height: 2px;
+  width: 4rem;
+  background: var(--cardinal);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.5rem;
+}
+
+.menu-desc {
+  font-size: 1rem;
+  color: var(--granite-gray);
+}
+
+.menu-price {
+  font-size: 1.5rem;
+}
+
+.menu-feature {
+  background-color: var(--pink-salmon);
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  height: 100%;
+  color: var(--white);
+  padding: 0.3rem 0.5rem;
+  line-height: 0.5rem;
+}
