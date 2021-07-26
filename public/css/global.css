@@ -39,17 +39,6 @@ h5 {
   background: var(--pink-salmon);
 }
 
-/* navigation */
-#navigation {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 3px solid var(--cardinal);
-}
-
-.nav-link {
-  font-size: 1.25rem;
-}
-
 /* custom scrollbar */
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -363,4 +352,56 @@ footer {
 /* form */
 select:invalid {
   color: gray;
+}
+
+/* navigation */
+#navigation {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--cardinal);
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: var(--cardinal);
+}
+
+.navbar-collapse.show .nav-link {
+  padding-left: 1.75rem;
+  transition: all 0.5s;
+}
+
+.navbar-collapse.show .nav-link:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0.75rem;
+  height: 3px;
+  content: '';
+  background-color: var(--cardinal);
+}
+
+.inview-element {
+  transition: 2s;
+}
+
+/* map */
+#map {
+  width: 100%;
+  height: 28rem;
 }

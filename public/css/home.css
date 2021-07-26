@@ -52,7 +52,6 @@
 
 /* specialty section */
 .specialty__box {
-  background-color: var(--pink-salmon);
   height: 30rem;
   overflow: hidden;
   position: relative;

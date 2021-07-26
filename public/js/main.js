@@ -31,26 +31,50 @@ scrollToTopButton.onclick = function (e) {
   scrollToTop()
 }
 
-// counter
+// observer
+let observedElements = document.querySelectorAll('.inview-element') // Define the elements you want to intiate an action on
 
-const counters = document.querySelectorAll('.counting')
-const speed = 200
+const options = {
+  //define your options
+  threshold: 0.5,
+}
 
-counters.forEach((counter) => {
-  const animate = () => {
-    const value = +counter.getAttribute('data-count')
-    const data = +counter.innerText
+const inViewCallback = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // define the event/property you want to use
+      //do something with the element, in our case, add a class
+      // entry.target.classList.add('inview')
 
-    const time = value / speed
-    if (data < value) {
-      counter.innerText = Math.ceil(data + time)
-      setTimeout(animate, 1)
+      const counters = document.querySelectorAll('.counting')
+      const speed = 200
+
+      counters.forEach((counter) => {
+        const animate = () => {
+          const value = +counter.getAttribute('data-count')
+          const data = +counter.innerText
+
+          const time = value / speed
+          if (data < value) {
+            counter.innerText = Math.ceil(data + time)
+            setTimeout(animate, 1)
+          } else {
+            counter.innerText = value
+          }
+        }
+
+        animate()
+      })
     } else {
-      counter.innerText = value
+      // OPTIONAL, in case you want to do something once the intersection is done
     }
-  }
+  })
+}
 
-  animate()
+let observer = new IntersectionObserver(inViewCallback, options) // create a new instance using our callback which contains our elements and actions, using the options we defined
+
+observedElements.forEach((element) => {
+  observer.observe(element) // run the observer
 })
 
 // isotope
