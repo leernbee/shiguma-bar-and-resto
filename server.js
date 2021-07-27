@@ -5,7 +5,8 @@ var app = express()
 // set the view engine to ejs
 app.set('view engine', 'ejs')
 
-// use res.render to load up an ejs view file
+// static files
+app.use('/static', express.static(path.join(__dirname, 'public')))
 
 // index page
 app.get('/', function (req, res) {
@@ -31,9 +32,6 @@ app.get('/menu', function (req, res) {
 app.get('/contact', function (req, res) {
   res.render('pages/contact')
 })
-
-// static files
-app.use('/static', express.static(path.join(__dirname, 'public')))
 
 app.listen(3000)
 console.log('Server is listening on port 3000')
