@@ -305,7 +305,9 @@ footer {
 }
 
 @media (min-width: 992px) {
-  margin: 0 3em 3em 0;
+  .top-link {
+    margin: 0 3em 3em 0;
+  }
 }
 
 .top-link.show {
