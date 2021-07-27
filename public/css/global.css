@@ -265,6 +265,17 @@ footer {
   margin-bottom: 0;
 }
 
+@media (max-width: 991px) {
+  .cta__box {
+    height: 12rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cta__box h3 {
+    margin-bottom: 1rem;
+  }
+}
+
 /* back to top */
 .top-link {
   transition: all 0.25s ease-in-out;

@@ -42,29 +42,22 @@ const options = {
 const inViewCallback = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      // define the event/property you want to use
-      //do something with the element, in our case, add a class
-      // entry.target.classList.add('inview')
-
-      const counters = document.querySelectorAll('.counting')
-      const speed = 200
-
-      counters.forEach((counter) => {
-        const animate = () => {
-          const value = +counter.getAttribute('data-count')
-          const data = +counter.innerText
-
-          const time = value / speed
-          if (data < value) {
-            counter.innerText = Math.ceil(data + time)
-            setTimeout(animate, 1)
-          } else {
-            counter.innerText = value
-          }
-        }
-
-        animate()
-      })
+      // const counters = document.querySelectorAll('.counting')
+      // const speed = 200
+      // counters.forEach((counter) => {
+      //   const animate = () => {
+      //     const value = +counter.getAttribute('data-count')
+      //     const data = +counter.innerText
+      //     const time = value / speed
+      //     if (data < value) {
+      //       counter.innerText = Math.ceil(data + time)
+      //       setTimeout(animate, 1)
+      //     } else {
+      //       counter.innerText = value
+      //     }
+      //   }
+      //   animate()
+      // })
     } else {
       // OPTIONAL, in case you want to do something once the intersection is done
     }

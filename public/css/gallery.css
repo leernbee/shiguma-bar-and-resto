@@ -20,6 +20,7 @@
   border: 2px solid var(--white-smoke);
   transition: width 0.4s, height 0.4s;
   position: relative;
+  overflow: hidden;
 }
 
 .grid-item:hover .grid-item-content {
@@ -43,4 +44,9 @@
   width: 100%;
   z-index: -1;
   position: absolute;
+  transition: transform 0.2s;
+}
+
+.grid-item-content:hover img {
+  transform: scale(1.2);
 }
