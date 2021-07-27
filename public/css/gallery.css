@@ -5,7 +5,14 @@
 /* item is invisible, but used for layout */
 .grid-item,
 .grid-sizer {
-  width: calc(100% / 3);
+  width: calc(100% / 2);
+}
+
+@media (min-width: 992px) {
+  .grid-item,
+  .grid-sizer {
+    width: calc(100% / 3);
+  }
 }
 
 .grid-item {
@@ -29,9 +36,17 @@
 
 /* both item and item content change size */
 .grid-item.is-expanded {
-  width: calc(100% / 3 * 2);
-  height: calc(240px * 2);
+  width: calc(100% / 2 * 2);
+  height: 240px;
   z-index: 2;
+}
+
+@media (min-width: 992px) {
+  .grid-item.is-expanded {
+    width: calc(100% / 3 * 2);
+    height: calc(240px * 2);
+    z-index: 2;
+  }
 }
 
 .grid-item.is-expanded .grid-item-content {

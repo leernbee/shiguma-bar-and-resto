@@ -42,7 +42,7 @@
 }
 
 .hero__intro-inner h1 {
-  font-size: 4rem;
+  font-size: 3.75rem;
 }
 
 .hero__intro-inner p {
@@ -141,7 +141,6 @@
 
 /* values section */
 .values__box {
-  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   border-radius: 0.5rem;
