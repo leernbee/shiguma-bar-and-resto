@@ -149,13 +149,14 @@
 .values__box-img {
   position: relative;
   height: 160px;
+  width: 100%;
+  max-width: 20rem;
 }
 
 .values__box-img img {
   object-fit: cover;
   height: 100%;
   width: 100%;
-  max-width: 30rem;
   border-radius: 0.5rem;
 }
 
