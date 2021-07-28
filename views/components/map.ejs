@@ -8,10 +8,13 @@
     zoom: 15,
   })
 
+  var popup = new mapboxgl.Popup({ offset: 30 }).setHTML('<p class="p-2 mb-0">Keep Calm and Go Coding</p>')
+
   // Create a default Marker and add it to the map.
   var marker1 = new mapboxgl.Marker({
     color: '#212529',
   })
     .setLngLat([120.9939, 14.5855])
+    .setPopup(popup)
     .addTo(map)
 </script>
