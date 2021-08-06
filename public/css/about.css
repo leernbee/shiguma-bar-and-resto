@@ -1,0 +1,97 @@
+#believe {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/section-believe-bg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-header-about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/about-bg.jpg');
+}
+
+/* counter section */
+.counter__box {
+  text-align: center;
+}
+
+.counter__box-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 10px;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter__box-icon:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  border: 1px solid var(--cardinal);
+  z-index: -1;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+.counter__box-icon img {
+  height: 40px;
+  filter: invert(16%) sepia(39%) saturate(7393%) hue-rotate(347deg) brightness(83%) contrast(90%);
+}
+
+.counter__box:hover .counter__box-icon img,
+.counter__box:hover .counter__box-icon img {
+  filter: invert(100%) sepia(0%) saturate(7485%) hue-rotate(151deg) brightness(101%) contrast(102%);
+}
+
+.counter__box:hover .counter__box-icon:after,
+.counter__box:focus .counter__box-icon:after {
+  transform: rotate(135deg);
+  background: var(--cardinal);
+}
+
+.counter__box .counting {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.counter__box h5 {
+  color: var(--granite-gray);
+}
+
+/* testimonial section */
+#testimonial h5 {
+  font-style: italic;
+  color: var(--pink-salmon);
+  font-size: 1.2rem;
+}
+
+.testimonial__box .carousel-inner {
+  margin-bottom: 1rem;
+}
+
+.testimonial__box .carousel-control-prev {
+  margin-right: 0.5rem;
+}
+
+.testimonial__box .carousel-control-next,
+.testimonial__box .carousel-control-prev {
+  position: relative;
+  height: 2.25rem;
+  width: 2.25rem;
+  background-color: var(--granite-gray);
+  display: inline-flex;
+  border-radius: 99999px;
+}
+
+.testimonial__box .carousel-control-prev i,
+.testimonial__box .carousel-control-next i {
+  font-size: 1rem;
+}

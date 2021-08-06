@@ -1,0 +1,20 @@
+<div id="map"></div>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiY2FtcGNhbGlicmUiLCJhIjoiY2tya3RpeTRvMHh1MzJvcDg3bzRyazQ4aCJ9.6U_vgfllep9kiU4e_uqg-Q'
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/campcalibre/ckrl0mgp85fdn18k4pxpcjldm',
+    center: [120.9939, 14.5855],
+    zoom: 15,
+  })
+
+  var popup = new mapboxgl.Popup({ offset: 30 }).setHTML('<p class="p-2 mb-0">Taste of Authentic Japanese Cuisine</p>')
+
+  // Create a default Marker and add it to the map.
+  var marker1 = new mapboxgl.Marker({
+    color: '#212529',
+  })
+    .setLngLat([120.9939, 14.5855])
+    .setPopup(popup)
+    .addTo(map)
+</script>
